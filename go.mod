@@ -1,6 +1,6 @@
 module github.com/wizzard0/trycloudflared
 
-go 1.24.2
+go 1.24
 
 require (
 	github.com/cloudflare/cloudflared v0.0.0-20250203150802-c19f9194281e
