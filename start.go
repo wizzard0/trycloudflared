@@ -22,7 +22,6 @@ import (
 	"github.com/cloudflare/cloudflared/tlsconfig"
 	"github.com/cloudflare/cloudflared/tunnelrpc/pogs"
 	"github.com/pkg/errors"
-	"github.com/rs/zerolog"
 	"github.com/urfave/cli/v2"
 )
 
@@ -152,7 +151,3 @@ func CreateCloudflareTunnel(ctx context.Context, port int) (string, error) {
 	return "https://" + tunnel.QuickTunnelUrl, nil
 }
 
-// logAdapter wraps zerolog.Logger to satisfy the *zerolog.Logger interface requirement
-func zerologPtr(l zerolog.Logger) *zerolog.Logger {
-	return &l
-}
